@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="isolate bg-white">
+    <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+      <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
+        <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+        <defs>
+          <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#9089FC"></stop>
+            <stop offset="1" stop-color="#FF80B5"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="px-6 pt-6 lg:px-8">
+      <nav class="flex items-center justify-between" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <!-- Heroicon name: outline/bars-3 -->
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="http://localhost/classification/product" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
+  
+          <a href="http://localhost/classification/price.html" class="text-sm font-semibold leading-6 text-gray-900">Pricing</a>
+  
+          <a href="http://localhost/classification/signup.html" class="text-sm font-semibold leading-6 text-gray-900">Signup</a>
+  
+          <a href="http://localhost/classification/about.html" class="text-sm font-semibold leading-6 text-gray-900">About Us</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div role="dialog" aria-modal="true">
+        <div focus="true" class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <!-- Heroicon name: outline/x-mark -->
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-4 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Product</a>
+  
+                <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Pricing</a>
+  
+                <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Signup</a>
+  
+                <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">About Us</a>
+              </div>
+              <div class="py-6">
+                <a href="#" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="relative px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-24">
+          <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Empowering Your Files: Unveiling Content with Precision </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600">Transforming Uploads into Insights through Intelligent Classification.</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+              <a href="#" class="text-base font-semibold leading-7 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+          <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
+            <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+            <defs>
+              <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#9089FC"></stop>
+                <stop offset="1" stop-color="#FF80B5"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="bg-gray-50 pt-12 sm:pt-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Trusted by customers from over 80 countries</h2>
+        <p class="mt-3 text-xl text-gray-500 sm:mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium.</p>
+      </div>
+    </div>
+    <div class="mt-10 bg-white pb-12 sm:pb-16">
+      <div class="relative">
+        <div class="absolute inset-0 h-1/2 bg-gray-50"></div>
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-4xl">
+            <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+              <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
+                <dt class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">Accuracy</dt>
+                <dd class="order-1 text-5xl font-bold tracking-tight text-indigo-600">100%</dd>
+              </div>
+              <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+                <dt class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">Available</dt>
+                <dd class="order-1 text-5xl font-bold tracking-tight text-indigo-600">24/7</dd>
+              </div>
+              <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
+                <dt class="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">Files classified</dt>
+                <dd class="order-1 text-5xl font-bold tracking-tight text-indigo-600">Over 100k</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div class="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
+    <div class="absolute inset-0">
+      <div class="h-1/3 bg-white sm:h-2/3"></div>
+    </div>
+    <div class="relative mx-auto max-w-7xl">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.</p>
+      </div>
+      <div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+        <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+          <div class="flex-shrink-0">
+            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+          </div>
+          <div class="flex flex-1 flex-col justify-between bg-white p-6">
+            <div class="flex-1">
+              <p class="text-sm font-medium text-indigo-600">
+                <a href="#" class="hover:underline">Article</a>
+              </p>
+              <a href="#" class="mt-2 block">
+                <p class="text-xl font-semibold text-gray-900">Easily classify your files</p>
+                <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.</p>
+              </a>
+            </div>
+            <div class="mt-6 flex items-center">
+              <div class="flex-shrink-0">
+                <a href="#">
+                  <span class="sr-only">Roel Aufderehar</span>
+                  <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                </a>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-gray-900">
+                  <a href="#" class="hover:underline">Roel Aufderehar</a>
+                </p>
+                <div class="flex space-x-1 text-sm text-gray-500">
+                  <time datetime="2020-03-16">Mar 16, 2020</time>
+                  <span aria-hidden="true">&middot;</span>
+                  <span>6 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+          <div class="flex-shrink-0">
+            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+          </div>
+          <div class="flex flex-1 flex-col justify-between bg-white p-6">
+            <div class="flex-1">
+              <p class="text-sm font-medium text-indigo-600">
+                <a href="#" class="hover:underline">Video</a>
+              </p>
+              <a href="#" class="mt-2 block">
+                <p class="text-xl font-semibold text-gray-900">How to upload your file?</p>
+                <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.</p>
+              </a>
+            </div>
+            <div class="mt-6 flex items-center">
+              <div class="flex-shrink-0">
+                <a href="#">
+                  <span class="sr-only">Brenna Goyette</span>
+                  <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                </a>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-gray-900">
+                  <a href="#" class="hover:underline">Brenna Goyette</a>
+                </p>
+                <div class="flex space-x-1 text-sm text-gray-500">
+                  <time datetime="2020-03-10">Mar 10, 2020</time>
+                  <span aria-hidden="true">&middot;</span>
+                  <span>4 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
+          <div class="flex-shrink-0">
+            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+          </div>
+          <div class="flex flex-1 flex-col justify-between bg-white p-6">
+            <div class="flex-1">
+              <p class="text-sm font-medium text-indigo-600">
+                <a href="#" class="hover:underline">Case Study</a>
+              </p>
+              <a href="#" class="mt-2 block">
+                <p class="text-xl font-semibold text-gray-900">Organize your files better</p>
+                <p class="mt-3 text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.</p>
+              </a>
+            </div>
+            <div class="mt-6 flex items-center">
+              <div class="flex-shrink-0">
+                <a href="#">
+                  <span class="sr-only">Daniela Metz</span>
+                  <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                </a>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-gray-900">
+                  <a href="#" class="hover:underline">Daniela Metz</a>
+                </p>
+                <div class="flex space-x-1 text-sm text-gray-500">
+                  <time datetime="2020-02-12">Feb 12, 2020</time>
+                  <span aria-hidden="true">&middot;</span>
+                  <span>11 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="overflow-hidden bg-white py-16 px-6 lg:px-8 lg:py-24">
+    <div class="relative mx-auto max-w-xl">
+      <svg class="absolute left-full translate-x-1/2 transform" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
+        <defs>
+          <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
+      </svg>
+      <svg class="absolute right-full bottom-0 -translate-x-1/2 transform" width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
+        <defs>
+          <pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" />
+      </svg>
+      <div class="text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact sales</h2>
+        <p class="mt-4 text-lg leading-6 text-gray-500">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
+      </div>
+      <div class="mt-12">
+        <form action="#" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <div>
+            <label for="first-name" class="block text-sm font-medium text-gray-700">First name</label>
+            <div class="mt-1">
+              <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+            </div>
+          </div>
+          <div>
+            <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
+            <div class="mt-1">
+              <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+            <div class="mt-1">
+              <input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <div class="mt-1">
+              <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="phone-number" class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <div class="relative mt-1 rounded-md shadow-sm">
+              <div class="absolute inset-y-0 left-0 flex items-center">
+                <label for="country" class="sr-only">Country</label>
+                <select id="country" name="country" class="h-full rounded-md border-transparent bg-transparent py-0 pl-4 pr-8 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500">
+                  <option>US</option>
+                  <option>CA</option>
+                  <option>EU</option>
+                </select>
+              </div>
+              <input type="text" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-gray-300 py-3 px-4 pl-20 focus:border-indigo-500 focus:ring-indigo-500" placeholder="+1 (555) 987-6543">
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <div class="mt-1">
+              <textarea id="message" name="message" rows="4" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+                <button type="button" class="bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" role="switch" aria-checked="false">
+                  <span class="sr-only">Agree to policies</span>
+                  <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+                  <span aria-hidden="true" class="translate-x-0 inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+                </button>
+              </div>
+              <div class="ml-3">
+                <p class="text-base text-gray-500">
+                  By selecting this, you agree to the
+                  <a href="#" class="font-medium text-gray-700 underline">Privacy Policy</a>
+                  and
+                  <a href="#" class="font-medium text-gray-700 underline">Cookie Policy</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <button type="submit" class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Let's talk</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="bg-white" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+        <img class="h-7" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Company name">
+        <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">Solutions</h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Marketing</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Analytics</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Commerce</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Insights</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-10 md:mt-0">
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">Support</h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Pricing</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Documentation</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Guides</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">API Status</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">Company</h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">About</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Blog</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Jobs</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Press</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Partners</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-10 md:mt-0">
+              <h3 class="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
+              <ul role="list" class="mt-6 space-y-4">
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Claim</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Privacy</a>
+                </li>
+  
+                <li>
+                  <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Terms</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
